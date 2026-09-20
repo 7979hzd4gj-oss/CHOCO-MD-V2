@@ -3,19 +3,19 @@ const config = require('../config')
 
 cmd({
 pattern: "choco",
-desc: "Menu CHOCO-MD V2",
+desc: "CHOCO-MD V2 Menu",
 category: "main",
-react: "🍫",
+react: "🔥",
 filename: __filename
 },
-async (conn, mek, m, { from, reply }) => {
-let txt = `╭───『 CHOCO-MD V2 🍫 』───╮\n`
-txt += `│ 👑 Owner: CHOCO\n`
-txt += `│ 🤖 Bot: CHOCO-MD V2\n`
-txt += `╰──────────────────╯\n\n`
-txt += `📜 ${config.PREFIX}menu = menu complet\n`
-txt += `📜 ${config.PREFIX}ping = vitesse\n`
-txt += `> © CHOCO-MD V2`
-
-await conn.sendMessage(from, {text: txt}, {quoted: mek})
+async (conn, mek, m, { from }) => {
+let txt = "*CHOCO-MD V2*\n\n"
+txt += "Owner: CHOCO\n"
+txt += "Bot: CHOCO-MD V2\n"
+txt += `Prefix: ${config.PREFIX}\n\n`
+txt += `${config.PREFIX}menu\n`
+txt += `${config.PREFIX}ping\n`
+txt += `${config.PREFIX}choco\n\n`
+txt += "Powered by CHOCO"
+await conn.sendMessage(from, { text: txt }, { quoted: mek })
 })
