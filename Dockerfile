@@ -2,7 +2,6 @@ FROM node:lts-buster
 USER root
 RUN apt-get update && \
     apt-get install -y ffmpeg webp git && \
-    apt-get upgrade -y && \
     rm -rf /var/lib/apt/lists/*
 USER node
 RUN git clone https://github.com/JawadTechX/DJ /home/node/DJ
